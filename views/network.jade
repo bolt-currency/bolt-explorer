@@ -38,11 +38,12 @@ block content
     .panel.panel-default
       .panel-heading
         strong #{settings.locale.net_connections}
-      table#connections-table.table.table-bordered.table-striped
-        thead
-          tr
-            th.text-center #{settings.locale.net_address}
-            th.text-center #{settings.locale.net_protocol}
-            th.text-center #{settings.locale.net_subversion}
-            th.text-center #{settings.locale.net_country}
-        tbody.text-center
+      .table-responsive 
+        table#connections-table.table.table-bordered.table-striped
+          thead
+            tr
+              th.text-center #{settings.locale.net_address}
+              th.text-center #{settings.locale.net_protocol}
+              th.text-center #{settings.locale.net_subversion}
+              th.text-center #{settings.locale.net_country}
+          tbody.text-center

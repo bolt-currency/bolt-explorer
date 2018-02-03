@@ -51,7 +51,7 @@ block content
           }
         },
         columns: [
-          { data: 'blockindex', width: '8%' },
+          { data: 'blockindex', width: '10%' },
           { data: 'txid', width: '40%' },
           { data: 'recipients', width:'5%' },
           { data: 'total', width: '15%' },
@@ -74,19 +74,21 @@ block content
           button.close(type='button', data-dismiss='alert') ×
           strong #{settings.locale.ex_warning} #{warning}
   
-  .col-md-12
-    .panel.panel-default
-      .panel-heading
-        strong #{settings.locale.ex_latest_transactions}
-      table#recent-table.table.table-bordered.table-striped
-        thead
-          tr
-            th.text-center #{settings.locale.ex_block}
-            th.hidden-xs.text-center #{settings.locale.tx_hash}
-            th.hidden-xs.text-center #{settings.locale.tx_recipients}
-            th.text-center #{settings.locale.mkt_amount} (#{settings.symbol})
-            th.text-center #{settings.locale.timestamp}
-        tbody.text-center
-    .footer-padding
+  .row
+    .col-md-12
+      .panel.panel-default
+        .panel-heading
+          strong #{settings.locale.ex_latest_transactions}
+        .table-responsive 
+          table#recent-table.table.table-bordered.table-striped.dt-responsive.display.responsive.nowrap
+            thead
+              tr
+                th.text-center #{settings.locale.ex_block}
+                th.hidden-xs.text-center #{settings.locale.tx_hash}
+                th.hidden-xs.text-center #{settings.locale.tx_recipients}
+                th.text-center #{settings.locale.mkt_amount} (#{settings.symbol})
+                th.text-center #{settings.locale.timestamp}
+            tbody.text-center
+      .footer-padding
       
               
